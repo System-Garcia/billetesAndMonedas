@@ -90,3 +90,18 @@
 .moneda__imagen {
   max-width: 30%;
 }
+
+.goBack__button-contenedor {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.goBack__button {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  min-width: 10rem;
+  border-radius: .5rem;
+  border: 1px solid #e1e1e1;
+  cursor: pointer;
+}
