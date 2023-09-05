@@ -1,1 +1,43 @@
-<p>pago-page works!</p>
+<div class="contenedor">
+  <div class="teclado contenedor">
+    <div class="formulario">
+      <input
+        class="formulario__input"
+        type="text"
+        #inputFormulario
+        readonly=true
+        [value]="valueInput"
+        placeholder="Cantidad actual: 0"
+      />
+    </div>
+
+    <div class="teclado__teclas">
+      <div *ngFor="let number of numbers" (click)="agregarNumero(number)" class="tecla">
+        <button  class="tecla__button">{{number}}</button>
+      </div>
+
+      <div class="tecla">
+        <button class="tecla__button">*</button>
+      </div>
+
+      <div class="tecla">
+        <button (click)="agregarNumero(0)" class="tecla__button">0</button>
+      </div>
+
+      <div class="tecla">
+        <button class="tecla__button">#</button>
+      </div>
+
+    </div>
+
+    <div class="teclado__buttons">
+      <button (click)="validarPago(inputFormulario.value)" class="teclado__button-pagar">Enter</button>
+      <button (click)="borrarNumero()" class="teclado__button-pagar">Borrar</button>
+      <button (click)="limpiarInput()" class="teclado__button-pagar">Limpiar</button>
+    </div>
+
+
+  </div>
+
+
+</div>
