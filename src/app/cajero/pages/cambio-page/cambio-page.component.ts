@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { CajeroService } from '../../services/cajero.service';
 import { Router } from '@angular/router';
+import { environments } from 'src/app/environments/enviroment';
 
 @Component({
   selector: 'app-cambio-page',
@@ -10,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class CambioPageComponent implements OnInit {
   public cambio!: number;
+
+  imageUrl: string = environments.imageUrl;
 
   public billete500: number = 0;
   public billete200: number = 0;

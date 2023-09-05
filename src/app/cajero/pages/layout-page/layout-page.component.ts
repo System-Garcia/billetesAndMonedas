@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environments } from 'src/app/environments/enviroment';
 
 @Component({
   selector: 'app-layout-page',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./layout-page.component.css']
 })
 export class LayoutPageComponent {
+
+  public imageUrl: string = environments.imageUrl;
 
 }
