@@ -6,8 +6,8 @@
         type="text"
         #inputFormulario
         readonly=true
-        [value]="valueInput"
-        placeholder="Cantidad actual: 0"
+        [value]="valueInput | number"
+        placeholder="Cantidad actual: $0"
       />
     </div>
 
@@ -31,7 +31,7 @@
     </div>
 
     <div class="teclado__buttons">
-      <button (click)="validarPago(inputFormulario.value)" class="teclado__button-pagar">Enter</button>
+      <button (click)="validarPago(valueInput)" class="teclado__button-pagar">Enter</button>
       <button (click)="borrarNumero()" class="teclado__button-pagar">Borrar</button>
       <button (click)="limpiarInput()" class="teclado__button-pagar">Limpiar</button>
     </div>
@@ -39,5 +39,7 @@
 
   </div>
 
-
+  <div *ngIf="alerta" class="alerta">
+    <p>Introduce una cantidad valida</p>
+  </div>
 </div>

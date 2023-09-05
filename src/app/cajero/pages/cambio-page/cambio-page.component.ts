@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CambioPageComponent implements OnInit{
 
-
+  public cambio!: number;
 
   public billete500: number = 0;
   public billete200: number = 0;
@@ -23,7 +23,7 @@ export class CambioPageComponent implements OnInit{
     public router: Router,
     private cajeroService: CajeroService){}
 
-  calcularCambio(cantidad: string): void {
+  calcularCambio(cantidad: number): void {
 
     this.billete500 = 0;
     this.billete200 = 0;
@@ -98,7 +98,8 @@ export class CambioPageComponent implements OnInit{
 
   ngOnInit(): void {
     if(this.cajeroService.pago === 0) this.router.navigateByUrl('/cajero/pago');
-
+    console.log(this.cajeroService.pago);
+    this.cambio = this.cajeroService.pago
     this.calcularCambio(this.cajeroService.pago)
   }
 }

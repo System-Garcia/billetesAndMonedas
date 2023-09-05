@@ -1,15 +1,6 @@
 <div class="contenedor">
-  <div class="formulario">
-    <input
-      class="formulario__input"
-      type="text"
-      #inputFormulario
-      placeholder="Intruduce tu cantidad"
-      (keydown.enter)="calcularCambio(inputFormulario.value)"
-    />
-  </div>
 
-
+  <p class="cambio__titulo">Tu cambio total es de: ${{cambio | number}}</p>
 
   <div class="billetes">
     <div class="cambio">
@@ -75,4 +66,6 @@
       </div>
     </div>
   </div>
+
+  <button>Terminar operación</button>
 </div>

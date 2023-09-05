@@ -65,3 +65,16 @@
   border-radius: .5rem;
   border: 1px solid #e1e1e1;
 }
+
+.alerta {
+  position: fixed;
+  bottom: 3rem;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(211, 131, 131);
+  max-width: 30rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+}
