@@ -1,0 +1,87 @@
+.formulario {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+.formulario__input {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+  width: 40rem;
+  max-width: 40rem;
+}
+
+.billetes {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 780px) {
+  .billetes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cambio {
+  max-width: 80rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cambio {
+    flex-direction: row;
+  }
+}
+
+.billete__imagen {
+  max-width: 40rem;
+}
+
+
+
+.cambio__contendio {
+  display: flex;
+  flex-direction: column;
+}
+
+.monedas {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .monedas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.moneda {
+  max-width: rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .moneda {
+    flex-direction: row;
+  }
+}
+
+.moneda__imagen {
+  max-width: 30%;
+}

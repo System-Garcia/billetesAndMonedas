@@ -1,0 +1,13 @@
+.formulario {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+.formulario__input {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+  width: 40rem;
+  max-width: 40rem;
+}
