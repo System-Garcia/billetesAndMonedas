@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { CajeroService } from '../../services/cajero.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cambio-page',
   templateUrl: './cambio-page.component.html',
   styleUrls: ['./cambio-page.component.css']
 })
-export class CambioPageComponent {
+export class CambioPageComponent implements OnInit{
+
+
 
   public billete500: number = 0;
   public billete200: number = 0;
@@ -15,9 +19,12 @@ export class CambioPageComponent {
   public moneda5: number = 0
   public moneda1: number = 0
 
+  constructor(
+    public router: Router,
+    private cajeroService: CajeroService){}
 
   calcularCambio(cantidad: string): void {
-    console.log('ejecutado')
+
     this.billete500 = 0;
     this.billete200 = 0;
     this.billete50 = 0;
@@ -87,5 +94,11 @@ export class CambioPageComponent {
     }
 
     console.log(restante)
+  }
+
+  ngOnInit(): void {
+    if(this.cajeroService.pago === 0) this.router.navigateByUrl('/cajero/pago');
+
+    this.calcularCambio(this.cajeroService.pago)
   }
 }
