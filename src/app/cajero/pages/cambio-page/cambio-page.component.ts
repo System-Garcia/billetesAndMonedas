@@ -23,7 +23,7 @@ export class CambioPageComponent implements OnInit {
 
   constructor(public router: Router, private cajeroService: CajeroService) {}
 
-  calcularCambio(cantidad: number): void {
+  calcularCambio(cantidad: number): void { // comentario prueba
     this.billete500 = 0;
     this.billete200 = 0;
     this.billete50 = 0;
