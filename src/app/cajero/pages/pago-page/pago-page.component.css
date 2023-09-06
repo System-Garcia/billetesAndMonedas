@@ -64,6 +64,14 @@
   min-width: 10rem;
   border-radius: .5rem;
   border: 1px solid #e1e1e1;
+  background-color: rgb(13, 232, 35);
+}
+.teclado__button-pagar-borrar {
+  background-color: rgb(238, 238, 7);
+}
+
+.teclado__button-pagar-limpiar {
+  background-color: rgb(237, 71, 71);
 }
 
 .alerta {
